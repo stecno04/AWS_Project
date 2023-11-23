@@ -1,0 +1,14 @@
+services:
+  sagemaker-training:
+    image: my-custom-sagemaker-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sagemaker-training
+    command: ["tail", "-f", "/dev/null"]
+    environment:
+      - SAGEMAKER_PROGRAM=my-custom-training-script.py
+      - SAGEMAKER_SUBMIT_DIRECTORY=/opt/ml/code
+    volumes:
+      - ./src:/opt/ml/code
+    working_dir: /opt/ml/code
