@@ -3,7 +3,7 @@
 ## Install AWS CLI
 
 The following steps are required only if the AWS CLI is not installed/configured.
-See the last one to check if AWS CLI is installed/configured.
+See "Verify AWS CLI is working" to check if AWS CLI is installed/configured.
 
 ```
 _pwd=$PWD
